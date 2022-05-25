@@ -3,6 +3,7 @@ from rest_framework import serializers
 
 from .models.mango import Mango
 from .models.vehicle import Vehicle
+from .models.maintenance import Maintenance
 from .models.user import User
 
 class MangoSerializer(serializers.ModelSerializer):
@@ -14,6 +15,23 @@ class VehicleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vehicle
         fields = ('id', 'v_year', 'v_make', 'v_model', 'owner')
+
+class MaintenanceSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Maintenance
+    fields = '__all__'
+
+class MaintenanceReadSerializer(serializers.ModelSerializer):
+  # this just uses the '__str__' method in vehicle
+  vehicle = serializers.StringRelatedField()
+  class Meta:
+    model = Maintenance
+    fields = '__all__'
+
+class MaintenanceVehicleSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Maintenance
+    fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):
     # This model serializer will be used for User creation
