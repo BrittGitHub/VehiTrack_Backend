@@ -9,7 +9,7 @@ class Maintenance(models.Model):
   # define fields
   # https://docs.djangoproject.com/en/3.0/ref/models/fields/
   type = models.CharField(max_length=100)
-  date = models.DateTimeField()
+  date = models.DateField()
   cost = models.DecimalField(max_digits=11, decimal_places=2)
   notes = models.CharField(max_length=100)
   # Creating a field called `vehicle`
