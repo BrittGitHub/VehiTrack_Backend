@@ -3,9 +3,9 @@ Trying to find an easy way to track all of your household vehicles' maintenance 
 
 ## Deployed Application
 
-[Link]() to deployed application
+[Link](https://brittgithub.github.io/VehiTrack_Client/) to deployed application
 
-[Link]() to deployed Heroku remote server.
+[Link](https://vehitrack-backend.herokuapp.com/) to deployed Heroku remote server.
 
 [Link](https://github.com/BrittGitHub/VehiTrack_Client) to Client repository
 
